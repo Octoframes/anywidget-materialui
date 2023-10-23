@@ -1,20 +1,19 @@
-import * as React from "react";
-import Button from "@mui/material/Button";
-import Snackbar from "@mui/material/Snackbar";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
 
 import { createRender, useModelState } from "@anywidget/react";
 
 export const render = createRender(() => {
-  const [open, setOpen] = React.useState(false);
+	  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(true);
   };
 
   const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
+    if (reason === 'clickaway') {
       return;
     }
 
@@ -32,7 +31,6 @@ export const render = createRender(() => {
         color="inherit"
         onClick={handleClose}
       >
-        <CloseIcon fontSize="small" />
       </IconButton>
     </React.Fragment>
   );
